@@ -1,21 +1,21 @@
+#!/usr/bin/env python3
 
 import argparse
 import sys
 
-import torch
-from torch import nn
-from torch import optim
-from data import mnist
-from src.models.model import MyAwesomeModel
-from data import CorruptedMNIST
 import helper
-import wandb
-
-
-
 import matplotlib.pyplot as plt
+import torch
+import wandb
+from torch import nn, optim
 
-def evaluate(self):
+from data import CorruptedMNIST, mnist
+from src.models.model import MyAwesomeModel
+
+
+def evaluate(self) -> None:
+    '''evaluation function'''
+
     print("Evaluating until hitting the ceiling")
     parser = argparse.ArgumentParser(description='Training arguments')
     parser.add_argument('load_model_from', default="checkpoint.pth")
@@ -25,7 +25,6 @@ def evaluate(self):
     test_data= mnist()[1]
     testset=CorruptedMNIST(test_data)
     testloader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=True)
-    # TODO: Implement evaluation logic here
     state_dict = torch.load(args.load_model_from)
     model = MyAwesomeModel()
     model.load_state_dict(state_dict)

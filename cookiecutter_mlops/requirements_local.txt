@@ -1,0 +1,14 @@
+# local package
+-e .
+awscli
+black
+
+# external requirements basic 
+click
+coverage
+flake8
+interrogate
+isort
+mypy
+python-dotenv>=0.5.1
+Sphinx

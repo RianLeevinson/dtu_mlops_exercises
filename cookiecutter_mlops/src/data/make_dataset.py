@@ -9,16 +9,21 @@ import numpy as np
 import torch
 from dotenv import find_dotenv, load_dotenv
 from torchvision import datasets, transforms
+from omegaconf import OmegaConf
 
-BASE_PATH = "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/"
-DATA_PATH = "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/data/raw/corruptmnist/"
-TRAIN_PROCESSED_PATH = "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/data/processed/train"
-TEST_PROCESSED_PATH = "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/data/processed/test"
+config = OmegaConf.load('config/data_config.yaml')
+
+BASE_PATH = config.BASEPATH
+DATA_PATH = config.DATA_PATH
+TRAIN_PROCESSED_PATH = config.TRAIN_PROCESSED_PATH
+TEST_PROCESSED_PATH = config.TEST_PROCESSED_PATH
 @click.command()
 @click.argument('input_filepath', type=click.Path(exists=True))
 @click.argument('output_filepath', type=click.Path())
 
 class CorruptedMNIST():
+    '''dataset class for processing the MNIST data'''
+
     def __init__(self,data):
         self.data=data
         self.images=torch.from_numpy(self.data[0].copy()).float()

@@ -1,0 +1,6 @@
+
+PATHS:
+BASE_PATH: "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/"
+DATA_PATH: "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/data/raw/corruptmnist/"
+TRAIN_PROCESSED_PATH: "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/data/processed/train"
+TEST_PROCESSED_PATH: "/home/rianleevinson/mlops_git/dtu_mlops_exercises/cookiecutter_mlops/data/processed/test"

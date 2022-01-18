@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 
 import argparse
-import sys
 import os
+import sys
 
+import helper
 import numpy as np
 import torch
-from torch import nn
-from torch import optim
-from data import mnist
-from src.models.model import MyAwesomeModel
-from data import CorruptedMNIST
-import helper
 import wandb
 from omegaconf import OmegaConf
-   
-def train(self):
+from torch import nn, optim
+
+from data import CorruptedMNIST, mnist
+from src.models.model import MyAwesomeModel
+
+
+def train(self) -> None:
+    '''Training loop'''
 
     np.random.seed(42)
     torch.manual_seed(42)
