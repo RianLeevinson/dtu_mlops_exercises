@@ -3,7 +3,7 @@
 awscli
 black
 
-# external requirements basic 
+# external requirements basic
 click
 coverage
 flake8
