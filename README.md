@@ -5,13 +5,12 @@ Link to the course (https://skaftenicki.github.io/dtu_mlops/)
 
 It entails the various aspects of machine learning operations, project management, good coding practices and cloud operations.
 
-##Folder structure
 
+
+Folder structure
+------------
 The main files are within the cookiecutter folder. 
 The folder is organized as below:
-
-Project Organization
-------------
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
