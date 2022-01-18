@@ -30,12 +30,12 @@ class TrainOREvaluate(object):
         wandb.init(config=args)
         if not hasattr(self, args.command):
             print('Unrecognized command')
-            
+
             parser.print_help()
             exit(1)
         # use dispatch pattern to invoke method with same name
         getattr(self, args.command)()
-    
+
     def train(self):
         print("Training day and night")
         parser = argparse.ArgumentParser(description='Training arguments')
@@ -50,7 +50,7 @@ class TrainOREvaluate(object):
         epochs = args.e
         lr = args.lr
         batchsize = args.b
-        
+
         #training_data
 
         train_data= mnist()[0]
@@ -122,12 +122,11 @@ class TrainOREvaluate(object):
 
 if __name__ == '__main__':
     TrainOREvaluate()
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+

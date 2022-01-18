@@ -14,7 +14,7 @@ class CorruptedMNIST():
         self.labels=torch.from_numpy(np.array(self.data[1]).copy())
 
     def __getitem__(self, idx):
-        
+
         return self.images[idx],self.labels[idx]
 
     def __len__(self):
@@ -61,10 +61,10 @@ def mnist():
     test_labels=np.concatenate([np.load(i,  allow_pickle=True)['labels'] for i in test_paths],axis=0)
     test = [test_images,test_labels]
 
-    
+
 
     return [test, train]
-    
+
 
 
 print(len(mnist()[1][0]))
