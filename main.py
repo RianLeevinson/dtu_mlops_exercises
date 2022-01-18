@@ -122,11 +122,3 @@ class TrainOREvaluate(object):
 
 if __name__ == '__main__':
     TrainOREvaluate()
-
-
-
-
-
-
-
-
