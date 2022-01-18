@@ -1,0 +1,7 @@
+   # Base image
+   FROM python:3.7-slim
+
+COPY requirements.txt requirements.txt
+COPY setup.py setup.py
+COPY src/ src/
+COPY data/ data/
